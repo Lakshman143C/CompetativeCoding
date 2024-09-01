@@ -1,13 +1,17 @@
 package org.laxman.striver.linkedlist.doublyLL;
 
+import java.util.Stack;
+
 public class DLLFunctions {
     public static void main(String[] args) {
         int[] arr={1,2,3,4,5,6,7,8,9};
         Node head=arr2LL(arr);
         printLL(head);
-
-        remoteGivenNode(head.next.next);
-        System.out.println();printLL(head);
+        System.out.println();
+        Node head1=reverseDLL(head);
+        printLL(head1);
+ //       remoteGivenNode(head.next.next);
+   //     System.out.println();printLL(head);
 //        Node newhead=deleteHead(head);
 //        System.out.println();
 //        printLL(newhead);
@@ -162,5 +166,21 @@ public class DLLFunctions {
                 System.out.print("->");
             temp=temp.next;
         }
+    }
+
+    public static Node reverseDLL(Node head){
+        Node temp=head;
+        Stack<Integer> data=new Stack<>();
+        while(temp!=null){
+            data.push(temp.data);
+            temp=temp.next;
+        }
+
+        temp=head;
+        while (temp!=null){
+            temp.data=data.pop();
+            temp=temp.next;
+        }
+        return head;
     }
 }
