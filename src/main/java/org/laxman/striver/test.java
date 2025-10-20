@@ -10,7 +10,23 @@ public class test {
 //        subarraySum(nums,0);
         int[]  a={2,0};
         int[] b={1};
-        merge(a,3,b,6);
+        //merge(a,3,b,6);
+        int n=7;
+        for(int i=0;i<n;i++){
+            for(int k=0;k<n-i;k++)
+                System.out.print(" ");
+            for(int l=0;l<=i;l++) {
+                System.out.print("*");
+                if(l!=i)
+                    System.out.print(" ");
+            }
+            for(int k=0;k<2*(n-i);k++)System.out.print(" ");
+
+            for(int l=0;l<=i;l++) System.out.print("* ");
+
+
+            System.out.println();
+        }
 
     }
 

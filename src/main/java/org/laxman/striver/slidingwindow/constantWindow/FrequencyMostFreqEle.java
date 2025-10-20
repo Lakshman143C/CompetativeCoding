@@ -1,4 +1,4 @@
-package org.laxman.striver.slidingwindow;
+package org.laxman.striver.slidingwindow.constantWindow;
 
 import java.util.Arrays;
 
